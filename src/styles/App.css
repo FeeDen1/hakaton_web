@@ -10,5 +10,40 @@
 }
 
 .App {
-    width: 800px;
+    width: 100vw;
+}
+
+
+.video__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.camera-grid {
+    display: grid;
+    width: 90vw;
+    height: 80vh;
+    object-fit: contain;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(300px, 1fr)); /* 3 камеры в ряду, можно изменить на свой вкус */
+    gap: 5px;
+}
+
+.camera-container {
+    max-width: 100%;
+    object-fit: contain;
+    padding-bottom: 75%; /* 4:3 соотношение сторон (или другое по вашему выбору) */
+    position: relative;
+}
+
+iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }

@@ -4,7 +4,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: #333; /* Цвет фона навигационной панели */
-    padding: 10px;
+    padding: 5px;
     color: white; /* Цвет текста */
 }
 
@@ -30,4 +30,5 @@ img {
 
 h1{
     font-size: 20px;
+    margin: 0;
 }
