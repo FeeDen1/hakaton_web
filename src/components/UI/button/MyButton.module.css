@@ -1,5 +1,5 @@
 .MyBtn {
-    width: auto;
+    width: 100%;
     padding: 10px 10px;
     color:teal;
     font-size: 14px;
@@ -7,4 +7,8 @@
     border: 1px solid teal;
     cursor: pointer;
     border-radius: 5px;
+}
+
+.MyBtn:hover {
+    background: aquamarine;
 }

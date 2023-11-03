@@ -7,7 +7,7 @@ const Navbar = ({title}) => {
   return (
       <nav className={cl.navbar}>
         <div className={cl.navbar_left}>
-          <img width='40px' height='auto' src='https://www.anapa-official.ru/simai.data/image/logo/Coat_of_Arms_of_Anapa_(Krasnodar_krai).svg%20copy.png' alt=''/>
+          <img width='35px' height='auto' src='https://www.anapa-official.ru/simai.data/image/logo/Coat_of_Arms_of_Anapa_(Krasnodar_krai).svg%20copy.png' alt=''/>
           <h1>{title}</h1>
         </div>
         <div className={cl.navbar_right}>

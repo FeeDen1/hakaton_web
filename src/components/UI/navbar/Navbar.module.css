@@ -1,10 +1,10 @@
 .navbar {
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #333; /* Цвет фона навигационной панели */
-    padding: 10px;
+    padding: 5px;
     color: white; /* Цвет текста */
 }
 
@@ -20,7 +20,7 @@
 .navbar_right {
     width: 115px; /* Ширина картинки */
     height: auto;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 
@@ -29,5 +29,5 @@ img {
 }
 
 h1{
-    font-size: 20px;
+    font-size: 18px;
 }
