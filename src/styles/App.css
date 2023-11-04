@@ -11,6 +11,9 @@
 
 .App {
     width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
@@ -20,7 +23,7 @@
     align-items: center;
 }
 
-h1 {
+.camera-list-name {
     font-size: 24px;
     margin-bottom: 20px;
 }
@@ -30,7 +33,7 @@ h1 {
     width: 90vw;
     height: 80vh;
     object-fit: contain;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-template-rows: repeat(auto-fill, minmax(300px, 1fr)); /* 3 камеры в ряду, можно изменить на свой вкус */
     gap: 5px;
 }
@@ -46,4 +49,8 @@ iframe {
     position: absolute;
     width: 100%;
     height: 100%;
+}
+
+.error {
+    border: 1px solid red;
 }

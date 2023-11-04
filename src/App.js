@@ -3,24 +3,38 @@ import './styles/App.css'
 import Navbar from "./components/UI/navbar/Navbar";
 import CameraComponent from "./components/CameraComponent";
 import CameraComponentsList from "./components/CameraComponentsList";
-
+import MyButton from "./components/UI/button/MyButton";
+import MyModal from "./components/modal/MyModal";
+import CameraAddForm from "./components/CameraAddForm";
 
 
 function App() {
-  const cameraUrls = [
-    'http://webcam.anapa-official.ru:9999/player/?key=q1322qefasfrttg&cam=56543f59-b3c5-40c8-a8b1-ca9cb3db0e3b',
-    'http://webcam.anapa-official.ru:9999/player/?key=q1322qefasfrttg&cam=d540f253-3ca6-49bc-ac32-a4d36b787157',
-      'http://webcam.anapa-official.ru:9999/player/?key=q1322qefasfrttg&cam=efb90850-93df-4bbb-ac51-9663342ee5b4',
-      'http://webcam.anapa-official.ru:9999/player/?key=q1322qefasfrttg&cam=c4b93943-9329-4dcc-8096-72dab29387dd',
-    'http://webcam.anapa-official.ru:9999/player/?key=q1322qefasfrttg&cam=efb90850-93df-4bbb-ac51-9663342ee5b4',
-    'http://webcam.anapa-official.ru:9999/player/?key=q1322qefasfrttg&cam=efb90850-93df-4bbb-ac51-9663342ee5b4',
 
-  ];
+
+  const [modal,setModal] = useState(false)
+  const [cameraUrl, setCameraUrl] = useState([
+    'http://webcam.anapa-official.ru:9999/player/?key=q1322qefasfrttg&cam=efb90850-93df-4bbb-ac51-9663342ee5b4',
+    'http://webcam.anapa-official.ru:9999/player/?key=q1322qefasfrttg&cam=965aa513-a27d-4078-92b4-3ff104bc0622',
+    'https://rtsp.me/embed/i93R6hin/?'
+  ])
+
+  const addUrl = (newUrl) => {
+    setCameraUrl([...cameraUrl,
+      `rtsp://${newUrl.login}:${newUrl.password}@${newUrl.IP}:${newUrl.port}/cam/realmonitor?channel=${newUrl.channelNo}&subtype=${newUrl.typeNo}`
+    ])
+    setModal(false)
+    console.log(newUrl)
+  }
+
   return (
       <div className="App">
         <Navbar title={"Муниципальное образование города-курорта Анапа"}/>
 
-        <CameraComponentsList cameraUrls={cameraUrls}/>
+        <CameraComponentsList cameraUrls={cameraUrl}/>
+        <MyModal visible={modal} setVisible={setModal}>
+          <CameraAddForm add={addUrl}/>
+        </MyModal>
+        <MyButton onClick={() => setModal(true)}>gg</MyButton>
       </div>
 
   )

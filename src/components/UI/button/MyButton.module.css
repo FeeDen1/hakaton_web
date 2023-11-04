@@ -8,3 +8,8 @@
     cursor: pointer;
     border-radius: 5px;
 }
+
+.MyBtn:hover {
+    background: aquamarine;
+}
+
