@@ -18,7 +18,9 @@
 
 /* Стили для правой части навигационной панели (картинка и кнопка) */
 .navbar_right {
-    width: 115px; /* Ширина картинки */
+    display: flex;
+    gap: 10px;
+    width: auto; /* Ширина картинки */
     height: auto;
     margin-right: 10px;
 }

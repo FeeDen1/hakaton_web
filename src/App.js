@@ -26,15 +26,20 @@ function App() {
     console.log(newUrl)
   }
 
+  const changeModalStatus = (modal) => {
+    setModal(true)
+  }
+
+
   return (
       <div className="App">
-        <Navbar title={"Муниципальное образование города-курорта Анапа"}/>
+        <Navbar changeM={changeModalStatus} title={"Муниципальное образование города-курорта Анапа"}/>
 
         <CameraComponentsList cameraUrls={cameraUrl}/>
         <MyModal visible={modal} setVisible={setModal}>
           <CameraAddForm add={addUrl}/>
         </MyModal>
-        <MyButton onClick={() => setModal(true)}>gg</MyButton>
+
       </div>
 
   )

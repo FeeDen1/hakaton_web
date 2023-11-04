@@ -1,9 +1,10 @@
 
 import cl from './Navbar.module.css'
 import MyButton from "../button/MyButton";
+import React from "react";
 
 
-const Navbar = ({title}) => {
+const Navbar = ({title, changeM}) => {
   return (
       <nav className={cl.navbar}>
         <div className={cl.navbar_left}>
@@ -11,7 +12,7 @@ const Navbar = ({title}) => {
           <h1>{title}</h1>
         </div>
         <div className={cl.navbar_right}>
-
+          <MyButton onClick={() => changeM(true)}>Добавить камеру</MyButton>
           <MyButton>
             Сменить тему
           </MyButton>

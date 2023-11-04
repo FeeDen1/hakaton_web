@@ -1,10 +1,8 @@
 import React, {useState} from 'react';
 import MyInput from "./UI/input/MyInput";
 import MyButton from "./UI/button/MyButton";
-import myInput from "./UI/input/MyInput";
 
 const CameraAddForm = ({add}) => {
-
 
 
   const [cameraUrl, setCameraUrl] = useState({
@@ -16,8 +14,7 @@ const CameraAddForm = ({add}) => {
     typeNo: ''
   })
 
-  const [isValidIPv4, setIsValidIPv4] = useState(false);
-  const [isValidIPv6, setIsValidIPv6] = useState(false);
+
   const [error, setError] = useState('')
 
 
